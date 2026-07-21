@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Proyecto de Formularios en Rails
+En este proyecto se crean formularios primero utilizando HTML y luego usando métodos auxiliares que proporciona Rails
