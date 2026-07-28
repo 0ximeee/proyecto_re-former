@@ -1,3 +1,30 @@
-<h1>Sign Up</h1>
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Iniciar Sesión</h1>
 
-<p>Create a new user.</p>
+    <p>Crea un nuevo usuario.</p>
+    
+    <form action="/users" method="post" accept-charset="UTF-8" data-turbo="false>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<laber for="username"> Usuario: </label>
+	<input type="text" id="username" name="user[username]">
+
+	<br><br>
+
+        <laber for="email"> Correo Electrónico: </label>
+        <input type="text" id="email" name="user[email]">
+
+        <br><br>
+
+        <laber for="password"> Contraseña: </label>
+        <input type="text" id="password" name="user[password]">
+
+        <br><br>
+
+        <input type="submit" value="Create Users">
+     </form>
+
+  </body>
+</html>
