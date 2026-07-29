@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <body>
+   <h1>Edita tu usuario</h1>
+
+   <p>Edita tu usuario.</p>
+
+   <%= form_with model: @user do |form| %>
+     <%= form.label :username %>
+     <%= form.text_field :username %>
+
+     <%= form.label :email %>
+     <%= form.email_field :email, placeholder:"ejemplo@correo.com" %>
+
+     <%= form.label :password %>
+     <%= form.password_field :password %>
+
+     <%= form.submit "Save User" %>
+  <% end %>
+
+  <% if @user.errors.any? %>
+    <div>
+      <h2>Se encontraron los siguientes errores:</h2>
+      <ul>
+         <% @user.errors.full_messages.each do |message| %>
+           <li><%= message %></li>
+         <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ </body>
+</html>
